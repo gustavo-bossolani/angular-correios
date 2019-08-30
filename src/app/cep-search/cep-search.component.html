@@ -1,0 +1,28 @@
+<div class="input-group mb-3">
+
+  <div class="input-group-prepend">
+    <button (click)="buscaCEP()" class="btn btn-outline-dark" id="btn-buscar">Buscar CEP</button>
+  </div>
+
+  <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+    aria-describedby="btn-buscar" [(ngModel)]="cep" id="inp-cep">
+</div>
+
+<h1 class="display-6" id="url">{{ urlFinal }}</h1>
+<div class="card bg-dark" id="card">
+  <div class="card-body">
+      <span class="font-weight-bold">Cep digitado <p class="font-weight-light">{{ cep }}</p></span>
+
+      <span class="font-weight-bold">Logradouro <p class="font-weight-light">{{ objEndereco.logradouro }}</p></span>
+
+      <span class="font-weight-bold">Bairro <p class="font-weight-light">{{ objEndereco.bairro }}</p></span>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-sm-5">
+    
+  </div>
+
+</div>

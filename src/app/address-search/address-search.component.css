@@ -1,0 +1,14 @@
+#card {
+    color: white;
+    margin: 10px;
+}
+
+#url{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.btn-teste{
+    color: white;
+    background-color: black;
+}

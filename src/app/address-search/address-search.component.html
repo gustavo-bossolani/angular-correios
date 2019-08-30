@@ -1,0 +1,25 @@
+<div class="input-group">
+  <div class="input-group-prepend">
+    <button (click)="buscaEndereco()" class="btn btn-outline-dark" id="btn-buscar">Buscar Endereço</button>
+  </div>
+  <input type="text" aria-label="Estado" class="form-control" placeholder="Estado em Sigla. Ex: SP, RJ.."
+    [(ngModel)]="estado">
+  <input type="text" aria-label="Cidade" class="form-control" placeholder="Nome da Cidade" [(ngModel)]="cidade">
+  <input type="text" aria-label="Rua" class="form-control" placeholder="Nome da Rua" [(ngModel)]="rua">
+</div>
+<!--
+<p>estado digitado: {{ estado }}</p>
+<p>cidade digitado: {{ cidade }}</p>
+<p>rua digitado: {{ rua }}</p>
+<p>url: {{ urlFinal }}</p>
+-->
+<h1 class="display-6" id="url">{{ urlFinal }}</h1>
+
+<div class="card bg-dark" *ngFor="let item of objEndereco" id="card">
+  <h5 class="card-header font-weight-light">{{ item.logradouro }}</h5>
+
+  <div class="card-body">
+    <span class="font-weight-bold">Cep <p class="font-weight-light">{{ item.cep }}</p></span>
+    <span class="font-weight-bold">Bairro <p class="font-weight-light">{{ item.bairro }}</p></span>
+  </div>
+</div>
